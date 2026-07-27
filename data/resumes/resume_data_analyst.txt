@@ -1,0 +1,3 @@
+Vivek Kumar P — Data Analyst focused resume
+Skills: Python, SQL, Pandas, NumPy, Power BI, Scikit-learn
+Projects: Image Classification Web App, Cosmic Dressing (3D config tool)

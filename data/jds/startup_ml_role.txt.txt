@@ -1,0 +1,13 @@
+Company: Vertex Labs
+Role: Machine Learning Engineer (Fresher)
+
+We are a fast-growing AI startup looking for a fresher ML Engineer 
+to join our applied AI team. Responsibilities include building and 
+deploying RAG pipelines, working with vector databases like ChromaDB 
+or Pinecone, and integrating LLM APIs (OpenAI, Gemini) into production 
+apps. Strong Python fundamentals required. Experience with LangChain, 
+prompt engineering, or embeddings is a big plus. Familiarity with 
+Streamlit for rapid prototyping is a bonus.
+
+Location: Bengaluru (Hybrid)
+Experience: 0-1 years
