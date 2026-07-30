@@ -1,5 +1,0 @@
-Company: NeuralWorks
-Role: GenAI Engineer
-Looking for someone experienced with LangChain, vector databases 
-(Pinecone/Chroma), and building RAG pipelines. Should know 
-prompt engineering and have deployed LLM-powered applications.

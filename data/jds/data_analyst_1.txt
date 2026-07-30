@@ -1,6 +1,0 @@
-Company: Acme Analytics
-Role: Data Analyst
-We are looking for a Data Analyst with strong SQL, Python, and 
-data visualization skills (Power BI/Tableau). Experience with 
-statistical analysis and dashboarding is a plus. Familiarity 
-with GenAI tools like RAG or LLMs is a bonus.

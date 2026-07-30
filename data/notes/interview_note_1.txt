@@ -1,4 +1,0 @@
-Company: Acme Analytics
-Date: 2026-07-10
-Feedback: Good technical fit, but wanted more dashboarding 
-experience. Follow up in 2 weeks.
