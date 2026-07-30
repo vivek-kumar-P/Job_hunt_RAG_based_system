@@ -330,7 +330,13 @@ with tab3:
             model = _get_model()
             collection = _get_collection()
 
-            if collection.count() == 0:
+            try:
+                doc_count = collection.count()
+            except Exception:
+                collection = _get_collection()  # force refresh
+                doc_count = collection.count()
+
+            if doc_count == 0:
                 status_placeholder.empty()
                 answer = "You haven't added any applications yet — add one in the first tab and I'll be able to answer questions about it."
                 metadatas = []

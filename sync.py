@@ -22,9 +22,18 @@ def _get_model():
 
 def _get_collection():
     global _collection
+    client = chromadb.PersistentClient(path=DB_DIR)
+
     if _collection is None:
-        client = chromadb.PersistentClient(path=DB_DIR)
         _collection = client.get_or_create_collection(name=COLLECTION_NAME)
+        return _collection
+
+    # Verify the cached collection still actually exists; if not, recreate it
+    try:
+        _collection.count()
+    except Exception:
+        _collection = client.get_or_create_collection(name=COLLECTION_NAME)
+
     return _collection
 
 def _vector_id(app_id):
