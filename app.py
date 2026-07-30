@@ -14,7 +14,7 @@ MODEL_NAME = "gemini-3.5-flash"
 FALLBACK_MODEL = "gemini-2.5-flash-lite"
 
 load_dotenv()
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY") or st.secrets.get("GEMINI_API_KEY", "")
 
 st.set_page_config(page_title="Job Hunt Memory", page_icon="🎯", layout="centered")
 
