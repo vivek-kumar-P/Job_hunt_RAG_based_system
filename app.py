@@ -10,6 +10,8 @@ import sync
 from fetcher import fetch_jd_text
 from sync import _get_model, _get_collection
 
+db.init_db()
+
 MODEL_NAME = "gemini-3.5-flash"
 FALLBACK_MODEL = "gemini-2.5-flash-lite"
 
