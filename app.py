@@ -13,7 +13,7 @@ from sync import _get_model, _get_collection
 db.init_db()
 
 MODEL_NAME = "gemini-3.5-flash"
-FALLBACK_MODEL = "gemini-2.5-flash-lite"
+FALLBACK_MODEL = "gemini-3.5-flash-lite"
 
 load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY") or st.secrets.get("GEMINI_API_KEY", "")
@@ -80,12 +80,13 @@ def load_genai_client():
 client_genai = load_genai_client()
 
 def generate_with_fallback(prompt):
-    for model_name in [MODEL_NAME, FALLBACK_MODEL]:
+    for model_name in [MODEL_NAME, MODEL_NAME, FALLBACK_MODEL]:  # try primary twice, then fallback
         try:
             response = client_genai.models.generate_content(model=model_name, contents=prompt)
             return response.text
         except Exception as e:
             st.toast(f"⚠️ {model_name} failed: {type(e).__name__}: {str(e)[:150]}", icon="⚠️")
+            time.sleep(2)  # brief pause before next attempt
             continue
     return None
 
