@@ -3,3 +3,6 @@ sentence-transformers
 google-genai
 python-dotenv
 streamlit
+trafilatura
+pypdf
+python-docx
